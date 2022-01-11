@@ -1,5 +1,21 @@
 # Deploy-jenkins-aws-ec2
 
+# Install docker 
+  
+**`sudo apt update`**\
+**`sudo apt install apt-transport-https ca-certificates curl software-properties-common`**\
+**`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`**\
+**`sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"`**\
+**`apt-cache policy docker-ce`**\
+**`sudo apt install docker-ce`**\
+**`sudo systemctl status docker`**
+
+# Run docker without sudo permission
+**`sudo groupadd docker`**\
+**`sudo usermod -aG docker $USER`**\
+**`newgrp docker`**
+
+
 # Docker common commands
   
   To delete all containers including its volumes use \
@@ -10,13 +26,13 @@
 
 # Download jenkins from dockerhub
 
-  **`docker pull jenkins:2.60.3-alpine`**
+  **`docker pull jenkins/jenkins`**
   
 # Run jenkins image 
-  **`docker run --detach --name jenkins-container -p 8080:8080 -p 50000:50000 jenkins:2.60.3-alpine`**
+  **`docker run --detach --name my-jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins`**
   
 # Access docker image
-  **`docker exec -it jenkins-container /bin/bash`**
+  **`docker exec -it my-jenkins /bin/bash`**
   
 # Get initial password
   **`cd /var/jenkins_home/secrets/\`**
