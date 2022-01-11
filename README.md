@@ -35,8 +35,8 @@
   **`docker exec -it my-jenkins /bin/bash`**
   
 # Get initial password
-  **`cd /var/jenkins_home/secrets/\`**
-  **`cat initialAdminPassword\`**
+  **`cd /var/jenkins_home/secrets/`**\
+  **`cat initialAdminPassword`**
   By using cat command you will get initial password\
   
 # Run your jenkins 
