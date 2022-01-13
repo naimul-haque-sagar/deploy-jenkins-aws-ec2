@@ -1,6 +1,6 @@
 # Deploy-jenkins-aws-ec2
 
-# Install docker 
+# Install docker in ec2
   
 **`sudo apt update`**\
 **`sudo apt install apt-transport-https ca-certificates curl software-properties-common`**\
@@ -24,27 +24,27 @@
   To delete all the images\
   **`docker rmi -f $(docker images -aq)`**
 
-# Download jenkins from dockerhub
+# Pull jenkins image from dockerhub
 
   **`docker pull jenkins/jenkins`**
   
 # Run jenkins image 
   **`docker run --detach --name my-jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins`**
   
-# Access docker image
+# Access jenkins image
   **`docker exec -it my-jenkins /bin/bash`**
   
-# Get initial password
+# Get jenkins initial password
   **`cd /var/jenkins_home/secrets/`**\
   **`cat initialAdminPassword`**
   By using cat command you will get initial password\
   
 # Run your jenkins 
-  **`127.0.0.1:8080`**\
+  **`your-ec2-public-ip:8080`**\
   Now you will see jenkins home page\ 
   Paste the password here\
   And finally you are logged in\
   
-# Congratulations you can use jenkins
+# Congratulations you can use jenkins and create pipeline as your needs
 
 
