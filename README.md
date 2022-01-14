@@ -33,6 +33,9 @@
   To delete all the images\
   **`docker rmi -f $(docker images -aq)`**
 
+  Force remove images\
+  **`docker rmi -f <image_id> `**
+  
 # Pull jenkins image from dockerhub
 
   **`docker pull jenkins/jenkins`**
