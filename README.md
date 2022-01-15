@@ -36,6 +36,9 @@
   Force remove images\
   **`docker rmi -f <image_id> `**
   
+  See docker container logs\
+  **`docker logs --details <container-name>`**
+  
 # Pull jenkins image from dockerhub
 
   **`docker pull jenkins/jenkins`**
