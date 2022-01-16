@@ -39,6 +39,9 @@
   See docker container logs\
   **`docker logs --details <container-name>`**
   
+  Run image with env value\
+  **`docker run --name service-discovery-8761 -d -p 80:8761 -e ENVIRONMENT=peeronedev service-discovery-8761`**
+  
 # Pull jenkins image from dockerhub
 
   **`docker pull jenkins/jenkins`**
