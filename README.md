@@ -39,6 +39,9 @@
   See docker container logs\
   **`docker logs --details <container-name>`**
   
+  Build docker image\
+  **`docker build -t configuration-server .`**
+  
   Run image with env value\
   **`docker run --name service-discovery-8761 -d -p 80:8761 -e ENVIRONMENT=peeronedev service-discovery-8761`**
   
