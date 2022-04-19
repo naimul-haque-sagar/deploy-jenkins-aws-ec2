@@ -39,6 +39,12 @@
   See docker container logs\
   **`docker logs --details <container-name>`**
   
+  Copy file from host to container\
+  **`sudo docker cp ~/Desktop/to-be-copied.txt <containerId>:/to-be-copied.txt`**
+  
+  Copy file from container to host\
+  **`sudo docker cp <containerId>:/geeksforgeeks.txt ~/Desktop/geeksforgeeks.txt`**
+  
   Build docker image\
   **`docker build -t configuration-server .`**
   
